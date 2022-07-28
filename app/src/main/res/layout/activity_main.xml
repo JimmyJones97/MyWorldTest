@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center_horizontal"
+		android:background="#A5000000">
+
+		<android.support.v7.widget.CardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="3dp"
+			android:layout_marginRight="3dp"
+			app:cardCornerRadius="10dp"
+			app:cardElevation="2dp"
+			app:cardMaxElevation="4dp"
+			app:cardUseCompatPadding="true"
+			app:cardPreventCornerOverlap="true">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="#A5000000"
+				android:gravity="center_horizontal">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="30dp"
+					android:textColor="#000000"
+					android:gravity="start|center"
+					android:text="WORLD"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:background="#000000"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="此项目属于公益免费项目，不收费，不盈利，用爱发电\n寻找游戏漏洞只是为了让官方重视并和谐\n请勿非法贩卖，盗卖\n电报验证方法：\n打开群头像后点击START即可"/>
+
+			</LinearLayout>
+
+		</android.support.v7.widget.CardView>
+
+		<android.support.v7.widget.CardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="3dp"
+			android:layout_marginRight="3dp"
+			app:cardCornerRadius="10dp"
+			app:cardElevation="2dp"
+			app:cardMaxElevation="4dp"
+			app:cardUseCompatPadding="true"
+			app:cardPreventCornerOverlap="true">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="#A5000000"
+				android:gravity="center_horizontal">
+
+				<EditText
+					android:layout_width="match_parent"
+					android:ems="10"
+					android:background="#00FFFFFF"
+					android:inputType="text"
+					android:gravity="center"
+					android:cursorVisible="false"
+					android:hint="Hello World!"
+					android:textSize="20sp"
+					android:textColorHint="#000000"
+					android:layout_height="45dp"/>
+
+			</LinearLayout>
+
+		</android.support.v7.widget.CardView>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:gravity="center"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp">
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="S T A R T"
+				android:layout_weight="1.0"
+				android:id="@+id/开启辅助"
+				android:background="#00FFFFFF"
+				android:onClick="Click"/>
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="S T O P"
+				android:layout_weight="1.0"
+				android:id="@+id/关闭辅助"
+				android:background="#00FFFFFF"
+				android:onClick="Click"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:top="10dp"
+				android:text="验证:未知"
+				android:id="@+id/验证"
+				android:layout_marginTop="10dp"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="电报群@DreamHackEsp"
+            android:top="10dp"
+			android:layout_marginTop="10dp"/>
+
+		<CheckBox
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/Root模式"
+			android:text="是否Root"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

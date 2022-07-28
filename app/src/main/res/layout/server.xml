@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme"
+    style="@style/AppTheme">
+
+    <ImageView
+        android:id="@+id/图标"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:layout_marginTop="0.0dip"
+        android:src="@drawable/player"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#FFFFFFFF"
+        style="@style/AppTheme"
+        android:id="@+id/住布局">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ESP"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:background="#FF394973"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="游戏版本:"
+                            android:textColor="#000000"
+                            android:id="@+id/游戏版本"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动模式:"
+                            android:textColor="#000000"
+                            android:id="@+id/启动模式"/>
+
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioGroup
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="和平精英"
+                                android:textColor="#000000"
+                                android:id="@+id/和平精英"
+                                style="@style/CustomCheckboxTheme"/>
+                            
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PUBGM"
+                                android:textColor="#000000"
+                                android:id="@+id/刺激战场"
+                                style="@style/CustomCheckboxTheme"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="未来之役"
+                                android:textColor="#000000"
+                                android:id="@+id/未来之役"
+                                style="@style/CustomCheckboxTheme"/>
+                          
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="APEX"
+                                android:textColor="#000000"
+                                android:id="@+id/APEX"
+                                style="@style/CustomCheckboxTheme"/>
+                            
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="使命召唤"
+                                android:textColor="#000000"
+                                android:id="@+id/使命召唤"
+                                style="@style/CustomCheckboxTheme"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="穿越火线"
+                                android:textColor="#000000"
+                                android:id="@+id/穿越火线"
+                                style="@style/CustomCheckboxTheme"/>
+
+                           
+                        </RadioGroup>
+
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/布局初始化">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="▼Initialization"
+                            android:background="#C41F2A6C"
+                            android:textColor="#FFFFFF"
+                            android:gravity="center|start"
+                            android:textSize="10sp"
+                            android:id="@+id/initswitch"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:id="@+id/initlayout"
+                            android:layout_marginTop="5dp">
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="初始化"
+                                android:gravity="center|start"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:scrollX="0.8sp"
+                                android:scrollY="0.8sp"
+                                android:orientation="horizontal"
+                                style="@style/CustomCheckboxTheme"
+                                android:textColor="#000000"
+                                android:id="@+id/初始化"
+                                android:layout_marginStart="5dp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="▼Player"
+                            android:background="#C41F2A6C"
+                            android:textColor="#FFFFFFFF"
+                            android:gravity="center|start"
+                            android:textSize="10sp"
+                            android:id="@+id/Playerswitch"
+                            android:layout_marginTop="10dp"/>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:id="@+id/Playerlayout">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp">
+
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="方框"
+                                    android:gravity="center"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"
+                                    android:scrollX="0.8sp"
+                                    android:scrollY="0.8sp"
+                                    android:orientation="horizontal"
+                                    style="@style/CustomCheckboxTheme"
+                                    android:textColor="#000000"
+                                    android:id="@+id/方框"
+                                    android:layout_marginStart="5dp"/>
+
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="射线"
+                                    android:gravity="center"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"
+                                    android:scrollX="0.8sp"
+                                    android:scrollY="0.8sp"
+                                    android:orientation="horizontal"
+                                    style="@style/CustomCheckboxTheme"
+                                    android:textColor="#000000"
+                                    android:id="@+id/射线"
+                                    android:layout_marginStart="5dp"/>
+
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="骨骼"
+                                    android:gravity="center"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"
+                                    android:scrollX="0.8sp"
+                                    android:scrollY="0.8sp"
+                                    android:orientation="horizontal"
+                                    style="@style/CustomCheckboxTheme"
+                                    android:textColor="#000000"
+                                    android:id="@+id/骨骼"
+                                    android:layout_marginStart="5dp"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp">
+
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="昵称"
+                                    android:gravity="center"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"
+                                    android:scrollX="0.8sp"
+                                    android:scrollY="0.8sp"
+                                    android:orientation="horizontal"
+                                    style="@style/CustomCheckboxTheme"
+                                    android:textColor="#000000"
+                                    android:id="@+id/昵称"
+                                    android:layout_marginStart="5dp"/>
+
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="距离"
+                                    android:gravity="center"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"
+                                    android:scrollX="0.8sp"
+                                    android:scrollY="0.8sp"
+                                    android:orientation="horizontal"
+                                    style="@style/CustomCheckboxTheme"
+                                    android:textColor="#000000"
+                                    android:id="@+id/距离"
+                                    android:layout_marginStart="5dp"/>
+
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="手持"
+                                    android:gravity="center"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"
+                                    android:scrollX="0.8sp"
+                                    android:scrollY="0.8sp"
+                                    android:orientation="horizontal"
+                                    style="@style/CustomCheckboxTheme"
+                                    android:textColor="#000000"
+                                    android:id="@+id/手持"
+                                    android:layout_marginStart="5dp"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp">
+
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="血量"
+                                    android:gravity="center"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"
+                                    android:scrollX="0.8sp"
+                                    android:scrollY="0.8sp"
+                                    android:orientation="horizontal"
+                                    style="@style/CustomCheckboxTheme"
+                                    android:textColor="#000000"
+                                    android:id="@+id/血量"
+                                    android:layout_marginStart="5dp"/>
+
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="雷达"
+                                    android:gravity="center"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"
+                                    android:scrollX="0.8sp"
+                                    android:scrollY="0.8sp"
+                                    android:orientation="horizontal"
+                                    style="@style/CustomCheckboxTheme"
+                                    android:textColor="#000000"
+                                    android:id="@+id/雷达"
+                                    android:layout_marginStart="5dp"/>
+
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="预警"
+                                    android:gravity="center"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"
+                                    android:scrollX="0.8sp"
+                                    android:scrollY="0.8sp"
+                                    android:orientation="horizontal"
+                                    style="@style/CustomCheckboxTheme"
+                                    android:textColor="#000000"
+                                    android:id="@+id/预警"
+                                    android:layout_marginStart="5dp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="▼Aimbot"
+                            android:background="#C41F2A6C"
+                            android:textColor="#FFFFFFFF"
+                            android:gravity="center|start"
+                            android:textSize="10sp"
+                            android:id="@+id/Aimbotswitch"
+                            android:visibility="gone"
+
+                            android:layout_marginTop="10dp"/>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+
+                            android:id="@+id/Aimbotlayout">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp">
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="开启自瞄"
+                                        android:gravity="center"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold"
+                                        android:scrollX="0.8sp"
+                                        android:scrollY="0.8sp"
+                                        android:orientation="horizontal"
+                                        style="@style/CustomCheckboxTheme"
+                                        android:textColor="#000000"
+                                        android:id="@+id/自瞄开关"/>
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="显示自瞄圈"
+                                        android:gravity="center"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold"
+                                        android:scrollX="0.8sp"
+                                        android:scrollY="0.8sp"
+                                        android:orientation="horizontal"
+                                        style="@style/CustomCheckboxTheme"
+                                        android:textColor="#000000"
+                                        android:id="@+id/自瞄圈"
+                                        android:visibility="gone"
+                                        android:layout_marginStart="5dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="自瞄范围:"
+                                        android:id="@+id/Aimfovtv"
+                                        android:textColor="#F5000000"/>
+
+                                    <SeekBar
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:max="500"
+                                        android:id="@+id/Aimfov"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:text="▼AimLocation"
+                                android:background="#C41F2A6C"
+                                android:textColor="#FFFFFFFF"
+                                android:gravity="center|start"
+                                android:textSize="10sp"
+                                android:id="@+id/AimLocationswitch"
+                                android:layout_marginTop="10dp"/>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:id="@+id/AimLocationlayout">
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp">
+
+                                    <RadioGroup
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:text="头部"
+                                            style="@style/CustomCheckboxTheme"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/头部"
+                                            android:textColor="#FF000000"/>
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:text="胸部"
+                                            style="@style/CustomCheckboxTheme"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/胸部"
+                                            android:textColor="#FF000000"/>
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:text="脚部"
+                                            style="@style/CustomCheckboxTheme"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/脚部"
+                                            android:textColor="#FF000000"/>
+
+                                    </RadioGroup>
+
+                                </LinearLayout>
+
+                            
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="▼Setting"
+                            android:background="#C41F2A6C"
+                            android:textColor="#FFFFFFFF"
+                            android:gravity="center|start"
+                            android:textSize="10sp"
+                            android:id="@+id/Settingswitch"
+                            android:layout_marginTop="10dp"/>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/Settinglayout">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp">
+
+                                                                
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="方框左右调整:"
+                                    android:id="@+id/方框左右"
+                                    android:textColor="#F5000000"/>
+
+                                <SeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:max="400"
+                                    android:min="-400"
+                                    android:progress="0"
+                                    android:id="@+id/方框调节"/>
+                                
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="FPS:"
+                                    android:id="@+id/fpstv"
+                                    android:textColor="#F5000000"/>
+
+                                <SeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:max="120"
+                                    android:id="@+id/fps"/>
+                                
+                                
+                                
+                                
+                                
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
